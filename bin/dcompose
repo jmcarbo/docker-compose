@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -e DOCKER_TLS_VERIFY="$DOCKER_TLS_VERIFY" -e DOCKER_CERT_PATH=/client -v "$DOCKER_CERT_PATH":/client -v $(pwd):/src -e DOCKER_HOST="$DOCKER_HOST" docker-compose $*

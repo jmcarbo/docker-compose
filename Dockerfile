@@ -14,4 +14,7 @@ RUN python setup.py install
 
 RUN chown -R user /code/
 
+RUN mkdir /src && chown -R user /src/
+WORKDIR /src/
+
 ENTRYPOINT ["/usr/local/bin/docker-compose"]
